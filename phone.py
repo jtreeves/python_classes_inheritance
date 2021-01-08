@@ -47,12 +47,33 @@ class Android(Phone):
             self.battery_charge = 100
 
 class Galaxy(Android):
-    def __init__(self, phone_number, color, size, fold)
+    def __init__(self, phone_number, color, size, fold):
         super().__init__(phone_number, color, size)
         self.fold = fold
     
-    def __str__(self)
+    def __str__(self):
         return f'GALAXY PHONE >> phone_number:{self.phone_number}, color:{self.color}, size: {self.size}, fold: {self.fold}'
+    
+    def fold_phone(self):
+        self.fold = True
+    
+    def unfold_phone(self):
+        self.fold = False
+    
+    def check_fold_status(self):
+        if self.fold:
+            print('Your phone is folded.')
+        else:
+            print('Your phone is unfolded.')
+
+galaxy_z_phone = Galaxy('123-456-7890', 'blue', 'big', False)
+print(f'GALAXY_Z_PHONE >> {galaxy_z_phone}')
+galaxy_z_phone.call('456-123-0987')
+galaxy_z_phone.view_battery_charge()
+galaxy_z_phone.fold_phone()
+galaxy_z_phone.check_fold_status()
+galaxy_z_phone.unfold_phone()
+galaxy_z_phone.check_fold_status()
 
 frank_phone = Android('888-777-3333', 'black', 'small')
 print(f'FRANK_PHONE >> {frank_phone}')
