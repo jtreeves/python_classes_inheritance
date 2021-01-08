@@ -7,7 +7,7 @@ class Coffee():
         return f'cups: {self.cups}'
 
     def check_cups(self):
-        print(f'You have consumed {self.cups} cups of coffee so far today')
+        print(f'You have consumed {self.cups} cups of coffee so far today.')
 
     def check_over_caffeinated(self):
         if self.cups == 0:
@@ -25,6 +25,7 @@ class Coffee():
 starbucks_drinker = Coffee()
 
 print(starbucks_drinker)
+starbucks_drinker.check_cups()
 starbucks_drinker.drink()
 starbucks_drinker.drink()
 starbucks_drinker.drink()
