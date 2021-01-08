@@ -11,11 +11,9 @@ class Car():
 
     def drive(self):
         self.gas -= 1
-        print(f'You have {self.gas} gallons of gas left.')
     
     def fill_tank(self):
         self.gas = 10
-        print('Car is now filled with 10 gallons of gas.')
     
     def check_gas(self):
         print(f'You have {self.gas} gallons of gas in the tank.')
