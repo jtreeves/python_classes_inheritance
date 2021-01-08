@@ -19,13 +19,14 @@ class Phone():
         print(f'Opening {app_name}')
 
 class Android(Phone):
-    def __init__(self, phone_number, color):
+    def __init__(self, phone_number, color, size):
         super().__init__(phone_number, color)
         self.passcode = None
         self.battery_charge = 50
+        self.size = size
     
     def __str__(self):
-        return f'ANDROID PHONE >> phone_number:{self.phone_number}, color:{self.color}, passcode: {self.passcode}, battery_charge:{self.battery_charge}'
+        return f'ANDROID PHONE >> phone_number:{self.phone_number}, color:{self.color}, size: {self.size}, passcode: {self.passcode}, battery_charge:{self.battery_charge}'
     
     def set_passcode(self, new_passcode):
         self.passcode = new_passcode
@@ -45,7 +46,7 @@ class Android(Phone):
         if self.battery_charge > 100:
             self.battery_charge = 100
 
-frank_phone = Android('888-777-3333', 'black')
+frank_phone = Android('888-777-3333', 'black', 'small')
 print(f'FRANK_PHONE >> {frank_phone}')
 frank_phone.call('456-123-3333')
 frank_phone.view_battery_charge()
