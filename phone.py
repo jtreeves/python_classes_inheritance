@@ -21,9 +21,9 @@ class Phone():
 class Android(Phone):
     def __init__(self, phone_number, color, size):
         super().__init__(phone_number, color)
+        self.size = size
         self.passcode = None
         self.battery_charge = 50
-        self.size = size
     
     def __str__(self):
         return f'ANDROID PHONE >> phone_number:{self.phone_number}, color:{self.color}, size: {self.size}, passcode: {self.passcode}, battery_charge:{self.battery_charge}'
@@ -45,6 +45,14 @@ class Android(Phone):
 
         if self.battery_charge > 100:
             self.battery_charge = 100
+
+class Galaxy(Android):
+    def __init__(self, phone_number, color, size, fold)
+        super().__init__(phone_number, color, size)
+        self.fold = fold
+    
+    def __str__(self)
+        return f'GALAXY PHONE >> phone_number:{self.phone_number}, color:{self.color}, size: {self.size}, fold: {self.fold}'
 
 frank_phone = Android('888-777-3333', 'black', 'small')
 print(f'FRANK_PHONE >> {frank_phone}')
